@@ -1,0 +1,57 @@
+{
+  "name": "@gby/uniqueid",
+  "version": "0.0.0",
+  "description": "uniqueid 提供了获取唯一标识相关的工具，比如：UUID、UCID、Fingerprint、浏览器指纹、唯一标识符 等等",
+  "main": "dist/uniqueid.cjs.js",
+  "module": "dist/uniqueid.es.js",
+  "types": "types/index.d.ts",
+  "sideEffects": false,
+  "homepage": "https://github.com/GuoBinyong/uniqueid#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GuoBinyong/uniqueid"
+  },
+  "keywords": [
+    "unique",
+    "UUID",
+    "UCID",
+    "Fingerprint",
+    "Canvas Fingerprint",
+    "browser Fingerprint",
+    "Unique Identifier",
+    "浏览器指纹"
+  ],
+  "author": {
+    "name": "郭斌勇",
+    "email": "guobinyong@qq.com"
+  },
+  "license": "MIT",
+  "files": [
+    "dist/[^.]*",
+    "types/[^.]*",
+    "docs/[^.]*",
+    "doc/[^.]*"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "test": "node test/index.js",
+    "pretest": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-typescript": "^8.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.15.0",
+    "package-tls": "^1.2.2",
+    "path": "^0.12.7",
+    "rollup": "^2.35.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "ts-node": "^9.1.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.3"
+  }
+}
