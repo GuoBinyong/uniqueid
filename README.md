@@ -29,9 +29,11 @@
 # 1. 简介
 uniqueid 无任何依赖，提供了获取唯一标识相关的工具，比如：UUID、UCID、Fingerprint、浏览器指纹、唯一标识符 等等。
 
+之所以要重复造这个轮子，是因为网上找的其它浏览器指纹库会在浏览器启动前期每次刷新会得到不同的指纹。
+
 
 **具有以下功能：**  
-- 获取浏览器指纹
+- 获取浏览器指纹：即使在浏览器启动前期也非常稳定；之所以要重复造这个轮子，是因为网上找的其它浏览器指纹库会在浏览器启动前期每次刷新会得到不同的指纹。
 - 获取 UUID、UCID
 - 获取唯一字符串
 - 等等
@@ -97,6 +99,7 @@ import { getUUID,getUCID } from "path/to/package/uniqueid";
 + `setUCID(id:string)`：设置 UCID
 + `createUniqueIdentifier():string`：生成唯一的标识符，每次调用生成的都不一样
 + `getCanvasFingerprint():string`：获取浏览器的Canvas指纹，用来标识设备上的浏览器，理论上，对于 不同计算机实体的不同浏览器会生成不同的指纹标识
++ `murmurhash3_32_gc(key:string):number`：MurmurHash3 算法
 
 
 

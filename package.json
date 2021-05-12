@@ -19,6 +19,7 @@
     "Canvas Fingerprint",
     "browser Fingerprint",
     "Unique Identifier",
+    "MurmurHash3",
     "浏览器指纹"
   ],
   "author": {
