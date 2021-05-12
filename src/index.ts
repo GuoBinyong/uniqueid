@@ -60,7 +60,7 @@ export function getUUID():string{
  * @returns {string}
  */
 export function createUniqueIdentifier():string {
-    return Date.now().toString() + Math.random();
+    return Date.now().toString() + String(Math.random()).slice(1);
 }
 
 // 存储 uuid 的key的后缀
