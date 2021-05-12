@@ -1,6 +1,6 @@
 {
   "name": "@gby/uniqueid",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "uniqueid 无任何依赖，提供了获取唯一标识相关的工具，比如：UUID、UCID、Fingerprint、浏览器指纹、唯一标识符 等等",
   "main": "dist/uniqueid.cjs.js",
   "module": "dist/uniqueid.es.js",
