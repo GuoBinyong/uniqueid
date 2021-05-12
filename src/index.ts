@@ -54,6 +54,16 @@ export function getUUID():string{
 }
 
 
+/**
+ * 设置 UUID
+ * @param {*} id 
+ */
+export function setUUID(id:string){
+    const key = Key_Prefix + uuid_KeySuffix;
+    localStorage.setItem(key,id);
+}
+
+
 
 /**
  * 生成唯一的标识符，每次调用生成的都不一样

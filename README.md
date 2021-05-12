@@ -95,6 +95,7 @@ import { getUUID,getUCID } from "path/to/package/uniqueid";
 # 3. API接口
 + `setKeyPrefix(keyPrefix:string)`：设置 用于存储 id 的 key 的前缀
 + `getUUID():string`: 获取 UUID 通用唯一识别码，用于标识浏览器，对于不同电脑实体的不同浏览器 会有不同的值
++ `setUUID(id:string)`：设置 UUID
 + `getUCID():string`：获取 UCID，如果不重置，则对于每个浏览器中的同一个域名，每次获取的值都一样
 + `setUCID(id:string)`：设置 UCID
 + `createUniqueIdentifier():string`：生成唯一的标识符，每次调用生成的都不一样
