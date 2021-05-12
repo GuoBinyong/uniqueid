@@ -27,7 +27,8 @@
 
 
 # 1. 简介
-uniqueid 提供了获取唯一标识相关的工具，比如：UUID、UCID、Fingerprint、浏览器指纹、唯一标识符 等等。
+uniqueid 无任何依赖，提供了获取唯一标识相关的工具，比如：UUID、UCID、Fingerprint、浏览器指纹、唯一标识符 等等。
+
 
 **具有以下功能：**  
 - 获取浏览器指纹

@@ -2,9 +2,15 @@
  * 获取浏览器的Canvas指纹，用来标识设备上的浏览器
  * 理论上，对于 不同计算机实体的不同浏览器会生成不同的指纹标识
  * @returns 
+ * 
+ * 
+ * 经过测试，ctx.fillRect() 会导致在 Safari、Chrome、Edge 等浏览器刚启动初期渲染的Canvas指纹不一致，Safari经常需要刷新三次才能得到稳定的 Canvas指纹
+ * 所以，这里不用 ctx.fillRect() 进行绘制；
+ * 另外部分 window.navigator 中的数据也浏览器刚启动前期，也会有变化
+ * 所以，这里也不使用 window.navigator 
  */
 export function getCanvasFingerprint():string {
-    // 带有各种字符的文本
+    // 带有各种字符的文本，充分体现渲染差异
     const text = "?! 科研者 GuoBinYong abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ`~1!2@3#4$5%6^7&8*9(0)-_=+[{]}|;:',<.>/？！"
     const canvas = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
